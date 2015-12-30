@@ -2,8 +2,8 @@
 
 
 
-var app=angular.module('RoutingApp', ['ngRoute']);
-app.controller("mycontroller",function($scope){
+var app=angular.module('RoutingApp', ['ngRoute','ui.bootstrap']);
+app.controller("mycontroller",function($scope, $modal, $log){
 $scope.name="";
 $scope.persons=[
                   {
@@ -27,6 +27,30 @@ $scope.persons=[
 
 ];
 
+$scope.user=[{name:""}];
+$scope.mylist=[];
+$scope.open = function () {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      scope: $scope
+    });
+
+  };
+
+
+});
+
+app.controller('ModalInstanceCtrl',function($scope, $modalInstance){
+
+	$scope.ok = function () {
+    $modalInstance.close();
+    $scope.mylist.push(user);
+  };
+   $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
 
 });
 

@@ -11,10 +11,38 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
 </head>
     
 <body ng-controller="mycontroller">
 	<h2>AngularJS Routing Example</h2>
+
+	
+
+	<script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I a m a modal!</h3>
+        </div>
+       
+        
+         <form name = "addFriendForm">
+          <input ng-model = "user.name" class="form-control" type = "text" placeholder="Username" title=" Username" />
+          {{ user.name }}
+        </form>
+        
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button class="btn btn-default" ng-click="open()">Add Friend</button>
+    <div> Username: {{user.name}}</div>
+
+
+
+
+
 	<table class="table table-stripped">
 		<thead>
 			<tr><th>Id</th><th>person</th><th>Company</th></tr>
