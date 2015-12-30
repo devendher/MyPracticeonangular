@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="RoutingApp">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewpoint" content="width=device-width,intial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+    
+<body ng-controller="mycontroller">
+	<h2>AngularJS Routing Example</h2>
+	<table class="table table-stripped">
+		<thead>
+			<tr><th>Id</th><th>person</th><th>Company</th></tr>
+		</thead>
+  <tr ng-repeat="person in persons">
+    
+    <td><a href="/#/view/{{$index}}">{{ person.name}}</a></td>
+    <td>{{person.company}}</td>
+    <td><a href="">Show details</a></td>
+  </tr>
+</table>
+
+<input type="text" ng-model='name'>{{name}}
+<nav>
+<a href="#/first">First</a> |
+<a href="#/second">second</a> |
+<a href="#first">First</a> |
+<a href="#second">Second</a> |
+<a href="#back">Back</a>
+</nav>
+	
+	<div ng-view>
+	</div>
+</body>
+</html>
