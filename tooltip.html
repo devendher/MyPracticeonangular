@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<style>
+/* Tooltip Message Code from http://snapbuilder.com */
+.example{
+margin-top:100px;
+}
+.snaptip {position:relative;display:inline-block;
+color:#FFFFFF;}
+.snaptip .showtip {
+margin-top:6px;
+background:#FFFFFF;
+position:absolute;
+-moz-border-radius:6px;
+-webkit-border-radius:6px;
+border-radius:6px;
+-moz-box-shadow:3px 1px 10px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow:3px 1px 10px rgba(0, 0, 0, 0.2);
+box-shadow:3px 1px 10px rgba(0, 0, 0, 0.2);
+border:1px solid #B3B3B3;
+z-index:9;
+bottom:100%;
+width:200px;
+margin:8px;
+padding:8px;
+font-family:verdana,arial;
+font-size:80%;
+text-align:left;
+color:#000A04;
+-moz-transition:all 0.3s;
+-o-transition:all 0.3s;
+-webkit-transition:all 0.3s;
+transition:all 0.3s;
+visibility:hidden;
+opacity:0;
+-moz-transform:translateY(10px);
+-ms-transform:translateY(10px);
+-webkit-transform:translateY(10px);
+transform translateY(10px);
+}
+.snaptip .showtip:before, .snaptip .showtip:after {
+left:30%;
+height:0;
+width:0;
+display:block;
+content:" ";
+position:absolute;
+}
+.snaptip .showtip:before {
+border-left:7px solid transparent;
+border-right:7px solid transparent;
+border-top:7px solid #B3B3B3;
+margin-left:-7px;
+bottom:-7px;
+}
+.snaptip .showtip:after {
+border-left:6px solid transparent;
+border-right:6px solid transparent;
+border-top:6px solid #FFFFFF;
+margin-left:-6px;
+bottom:-6px;
+}
+.snaptip:hover .showtip {
+opacity:1;
+visibility:visible;
+-moz-transform:translateY(0);
+-ms-transform:translateY(0);
+-webkit-transform:translateY(0);
+transform:translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<div id="example" style="margin-top:100px">
+I have a <span class="snaptip" style="color:black">TOOLTIP MESSAGE 
+<div class="showtip">
+<h2>Titile</h2>
+I am a tooltip message.
+jhgjhgjhgj
+jhgfff
+jgfhfj
+hgf
+</div>
+</span> for you.
+</div>
+
+
+</body>
+</html>
+
